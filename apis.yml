@@ -1,23 +1,57 @@
 aid: bet-booth
+
 name: Bet Booth
+
 description: 'Bet Booth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
   and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bet-booth/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bet-booth-hosts.yml
+- type: Vendors
+  url: vendors/bet-booth-vendors.yml
+- type: DomainSecurity
+  url: security/bet-booth-domain-security.yml
 - type: Website
   url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer program or API documentation found for Bet Booth.
+  evidence:
+    - url: https://www.nasdaqprivatemarket.com/company/bet-booth
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
